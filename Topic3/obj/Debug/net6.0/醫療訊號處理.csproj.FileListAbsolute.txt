@@ -1,5 +1,0 @@
-C:\Users\88691\Desktop\醫療訊號處理\obj\Debug\net6.0\醫療訊號處理.csproj.AssemblyReference.cache
-C:\Users\88691\Desktop\醫療訊號處理\obj\Debug\net6.0\醫療訊號處理.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\88691\Desktop\醫療訊號處理\obj\Debug\net6.0\醫療訊號處理.AssemblyInfoInputs.cache
-C:\Users\88691\Desktop\醫療訊號處理\obj\Debug\net6.0\醫療訊號處理.AssemblyInfo.cs
-C:\Users\88691\Desktop\醫療訊號處理\obj\Debug\net6.0\醫療訊號處理.csproj.CoreCompileInputs.cache

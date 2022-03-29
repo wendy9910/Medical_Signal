@@ -1,0 +1,10 @@
+C:\Users\88691\Desktop\醫療訊號HW\HW3\HW3\bin\Debug\HW3.exe.config
+C:\Users\88691\Desktop\醫療訊號HW\HW3\HW3\bin\Debug\HW3.exe
+C:\Users\88691\Desktop\醫療訊號HW\HW3\HW3\bin\Debug\HW3.pdb
+C:\Users\88691\Desktop\醫療訊號HW\HW3\HW3\obj\Debug\HW3.csprojAssemblyReference.cache
+C:\Users\88691\Desktop\醫療訊號HW\HW3\HW3\obj\Debug\HW3.Form1.resources
+C:\Users\88691\Desktop\醫療訊號HW\HW3\HW3\obj\Debug\HW3.Properties.Resources.resources
+C:\Users\88691\Desktop\醫療訊號HW\HW3\HW3\obj\Debug\HW3.csproj.GenerateResource.cache
+C:\Users\88691\Desktop\醫療訊號HW\HW3\HW3\obj\Debug\HW3.csproj.CoreCompileInputs.cache
+C:\Users\88691\Desktop\醫療訊號HW\HW3\HW3\obj\Debug\HW3.exe
+C:\Users\88691\Desktop\醫療訊號HW\HW3\HW3\obj\Debug\HW3.pdb
