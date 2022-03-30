@@ -13,7 +13,7 @@ namespace HW3
 {
     public partial class Form1 : Form
     {
-        bool bLED = false;
+        bool bLED = false; //判定LED燈是否開
         int interval, iNow, len, i;
         List<byte> raw;
         byte[] buf;
@@ -22,17 +22,18 @@ namespace HW3
 
         public Form1()
         {
-            InitializeComponent();
+            //初始化
+            InitializeComponent(); 
         }
 
         private void getAllPorts() 
         {
-            cmbBxCOMPort.Items.Clear();
-            string[] ports = SerialPort.GetPortNames();
+            cmbBxCOMPort.Items.Clear(); 
+            string[] ports = SerialPort.GetPortNames(); //get serialport的名字 COM3、COM4、COM6
             Array.Sort(ports);
             foreach (string port in ports)
                 cmbBxCOMPort.Items.Add(port);
-            cmbBxCOMPort.SelectedIndex = cmbBxCOMPort.Items.Count - 1;
+            cmbBxCOMPort.SelectedIndex = cmbBxCOMPort.Items.Count - 1;//找最後一個COM6
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -45,7 +46,7 @@ namespace HW3
         private void btnAssign_Click(object sender, EventArgs e)
         {
             serialPort1.PortName = (string)cmbBxCOMPort.SelectedItem;
-            Size = new Size(818, 497);
+            Size = new Size(800, 497);
             iNow = 0;
             buf = new byte[serialPort1.ReadBufferSize];
             serialPort1.Open();
@@ -54,7 +55,8 @@ namespace HW3
 
         private void btnSetIntrval_Click(object sender, EventArgs e)
         {
-            serialPort1.Write(interval.ToString());
+            if (serialPort1.IsOpen)
+                serialPort1.Write(interval.ToString());
             bLED = true;
             rdBtnOn.Checked = true;
             rdBtnOn.ForeColor = Color.Blue;
@@ -62,7 +64,7 @@ namespace HW3
             rdBtnOFF.ForeColor = Color.Black;
             rdBtnOFF.BackColor = Color.White;
         }
-        private void getPortsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void getPortsToolStripMenuItem_Click(object sender, EventArgs e) //取得COM6
         {
             cmbBxCOMPort.Items.Clear();
             string[] ports = SerialPort.GetPortNames();
@@ -72,17 +74,19 @@ namespace HW3
             cmbBxCOMPort.SelectedIndex = cmbBxCOMPort.Items.Count - 1;
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e) 
         {
             if (serialPort1.IsOpen)
                 serialPort1.Close();
             Close();
         }
+        //結束程式
 
-        private void clearMessageToolStripMenuItem_Click(object sender, EventArgs e)
+        private void clearMessageToolStripMenuItem_Click(object sender, EventArgs e) 
         {
             txtBxRxInfo.Text = "";
         }
+        //清除訊息
 
         private void stopRxToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -95,6 +99,7 @@ namespace HW3
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             interval = (trackBar1.Value / trackBar1.TickFrequency) * trackBar1.TickFrequency;
+            // 1250/100 *100
             lblInterval.Text = interval.ToString();
         }
 
@@ -127,27 +132,29 @@ namespace HW3
 
         private void rdBtnOn_CheckedChanged(object sender, EventArgs e)
         {
-            if (!bLED)
-            {
-                bLED = true;
+       
+            bLED = true;
+            if (serialPort1.IsOpen)
                 serialPort1.Write("1");
-                rdBtnOn.ForeColor = Color.Blue;
-                rdBtnOn.BackColor = Color.Yellow;
-                rdBtnOFF.ForeColor = Color.Black;
-                rdBtnOFF.BackColor = Color.White;
-            }
+            rdBtnOn.ForeColor = Color.Blue;
+            rdBtnOn.BackColor = Color.Yellow;
+            rdBtnOFF.ForeColor = Color.Black;
+            rdBtnOFF.BackColor = Color.White;
+            
         }
         private void rdBtnOFF_CheckedChanged(object sender, EventArgs e)
         {
-            if (bLED)
-            {
-                bLED = false;
+
+            bLED = false;
+            if (serialPort1.IsOpen)
                 serialPort1.Write("0");
-                rdBtnOn.ForeColor = Color.Yellow;
-                rdBtnOn.BackColor = Color.Green;
-                rdBtnOFF.ForeColor = Color.Green;
-                rdBtnOFF.BackColor = Color.LightGray;
-            }
+
+            rdBtnOn.ForeColor = Color.Yellow;
+            rdBtnOn.BackColor = Color.Green;
+            rdBtnOFF.ForeColor = Color.Green;
+            rdBtnOFF.BackColor = Color.LightGray;
+
+
         }
 
     }
