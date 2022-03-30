@@ -13,7 +13,7 @@ void setup() {
 
 char val=0;
 String numberStr;
-int i0=0,i=0,tDuration=1000;
+int i0=0,i=0,tDuration=500;
 
 void loop() {
   // put your main code here, to run repeatedly:
@@ -35,7 +35,7 @@ void loop() {
   else if(numberStr.toInt()==0)
   {
     digitalWrite(LEDpin,LOW);
-    Serial.print("LED: OFF");
+    Serial.print("LED: OFF \n");
   }
   else if(numberStr.toInt()>=500 && numberStr.toInt()<=5000)
   {
