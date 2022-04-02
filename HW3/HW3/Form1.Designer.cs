@@ -149,6 +149,7 @@
             // 
             // txtBxRxInfo
             // 
+            this.txtBxRxInfo.Font = new System.Drawing.Font("新細明體", 10F);
             this.txtBxRxInfo.Location = new System.Drawing.Point(12, 160);
             this.txtBxRxInfo.Multiline = true;
             this.txtBxRxInfo.Name = "txtBxRxInfo";
