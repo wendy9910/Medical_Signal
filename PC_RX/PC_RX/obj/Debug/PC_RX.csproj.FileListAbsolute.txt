@@ -1,0 +1,10 @@
+C:\Users\88691\Desktop\Medical_Signal\PC_RX\PC_RX\bin\Debug\PC_RX.exe.config
+C:\Users\88691\Desktop\Medical_Signal\PC_RX\PC_RX\bin\Debug\PC_RX.exe
+C:\Users\88691\Desktop\Medical_Signal\PC_RX\PC_RX\bin\Debug\PC_RX.pdb
+C:\Users\88691\Desktop\Medical_Signal\PC_RX\PC_RX\obj\Debug\PC_RX.csprojAssemblyReference.cache
+C:\Users\88691\Desktop\Medical_Signal\PC_RX\PC_RX\obj\Debug\PC_RX.Form1.resources
+C:\Users\88691\Desktop\Medical_Signal\PC_RX\PC_RX\obj\Debug\PC_RX.Properties.Resources.resources
+C:\Users\88691\Desktop\Medical_Signal\PC_RX\PC_RX\obj\Debug\PC_RX.csproj.GenerateResource.cache
+C:\Users\88691\Desktop\Medical_Signal\PC_RX\PC_RX\obj\Debug\PC_RX.csproj.CoreCompileInputs.cache
+C:\Users\88691\Desktop\Medical_Signal\PC_RX\PC_RX\obj\Debug\PC_RX.exe
+C:\Users\88691\Desktop\Medical_Signal\PC_RX\PC_RX\obj\Debug\PC_RX.pdb
