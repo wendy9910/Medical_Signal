@@ -13,7 +13,8 @@
 長期穩定性: <+-%RH/年 <br />
 **<線路>** <br />
  <img src="https://ppt.cc/fHpfjx@.png" width = "50%" height = "50%" alt="DHT" align=center />
-[![](https://ppt.cc/fHpfjx@.png)](https://ppt.cc/fHpfjx@.png "DHT")
-[![](https://ppt.cc/fU6Cux@.jpg)](https://ppt.cc/fU6Cux@.jpg "p1"){:h="50%" w="50%"}
+ <img src="https://ppt.cc/fU6Cux@.jpg" width = "50%" height = "50%" alt="DHT2" align=center />
+
 **<顯示成果>** <br />
-[![](https://ppt.cc/fs4Ejx@.png)](https://ppt.cc/fs4Ejx@.png "c1"){:h="50%" w="50%"}
+<img src="https://ppt.cc/fs4Ejx@.png" width = "50%" height = "50%" alt="DHT3" align=center />
+
