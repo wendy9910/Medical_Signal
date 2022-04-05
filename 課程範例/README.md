@@ -12,7 +12,8 @@
 分辨率:濕度 1%RH，溫度 1度 <br />
 長期穩定性: <+-%RH/年 <br />
 **<線路>** <br />
-[![](https://ppt.cc/fHpfjx@.png)](https://ppt.cc/fHpfjx@.png "DHT"){:h="50%" w="50%"}
+ <img src="https://ppt.cc/fHpfjx@.png" width = "50%" height = "50%" alt="DHT" align=center />
+[![](https://ppt.cc/fHpfjx@.png)](https://ppt.cc/fHpfjx@.png "DHT")
 [![](https://ppt.cc/fU6Cux@.jpg)](https://ppt.cc/fU6Cux@.jpg "p1"){:h="50%" w="50%"}
 **<顯示成果>** <br />
 [![](https://ppt.cc/fs4Ejx@.png)](https://ppt.cc/fs4Ejx@.png "c1"){:h="50%" w="50%"}
