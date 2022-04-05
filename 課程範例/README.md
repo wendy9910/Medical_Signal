@@ -1,2 +1,5 @@
-# Medical_Signal
-醫療訊號處理課程實作
+## 課程範例
+### EX02【DisplayTextByOLED】
+[![](https://ppt.cc/fU6Cux)]
+
+### EX03【Measuring Humidity&Temperature】
