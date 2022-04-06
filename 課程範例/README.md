@@ -37,3 +37,5 @@ library:<a src="https://github.com/RobTillaart/Arduino">https://github.com/RobTi
  <img src="https://ppt.cc/fxG5Kx@.jpg" width = "50%" height = "50%" alt="DHT" align=center />
  <img src="https://ppt.cc/f1DxPx@.jpg" width = "50%" height = "50%" alt="DHT" align=center />
 
+**<顯示成果>** <br />
+<img src="https://ppt.cc/faEbtx@.png" width = "50%" height = "50%" alt="DHT3" align=center />
