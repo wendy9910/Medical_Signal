@@ -1,7 +1,5 @@
 ## 課程範例
-### EX02【DisplayTextByOLED】
-
-
+### EX02【DisplayTextByOLED】 
 ### EX03【Measuring Humidity&Temperature】
 **Sensor: DHT11** <br />
 **<基本資料>** <br />
