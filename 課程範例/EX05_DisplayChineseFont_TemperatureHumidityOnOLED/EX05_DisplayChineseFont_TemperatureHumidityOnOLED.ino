@@ -5,7 +5,7 @@
 #endif
 #include "myFont.h"
 
-U8G2_SSD1306_128X64_NONAME_F_SW_I2C u8g2(U8G2_R0, SCL, SDA, U8X8_PIN_NONE);
+U8G2_SSD1306_128X64_NONAME_F_SW_I2C u8g2(U8G2_R0, SCL, SDA, U8X8_PIN_NONE); //顯示型號SSD1306
 float temp;
 int humd;
 char bufT[30],bufH[20], buf[10];
@@ -36,9 +36,9 @@ void loop() {
   Serial.print("\n");
   u8g2.firstPage();
   do {
-    u8g2.setCursor(5,25);
+    u8g2.setCursor(2,25);
     u8g2.print(bufT);
-    u8g2.setCursor(5,45);
+    u8g2.setCursor(2,45);
     u8g2.print(bufH);
   }while(u8g2.nextPage());
   delay(1000);
