@@ -11,7 +11,7 @@ void setup() {
 }
 char val=0;
 String numberStr;
-int i0=0,i=0,tDuration=1000;
+int i0=0,i=0,tDuration=500;
 
 void loop() {
   // put your main code here, to run repeatedly:
@@ -22,12 +22,12 @@ void loop() {
   if(numberStr.toInt()==1)
   {
     digitalWrite(LEDpin,HIGH);
-    Serial.println("LED: ON duration (");
-    Serial.println(tDuration);
-    Serial.println("ms),\t");
+    Serial.print("LED: ON duration (");
+    Serial.print(tDuration);
+    Serial.print("ms),\t");
     delay(tDuration);
     digitalWrite(LEDpin,LOW);
-    Serial.println("LED: OFF");
+    Serial.print("LED: OFF");
     Serial.println("- - - - - - - -");  
   }
   else if(numberStr.toInt()==0)
@@ -38,8 +38,8 @@ void loop() {
   else if(numberStr.toInt()>=500 && numberStr.toInt()<= 5000)
   {
     tDuration=numberStr.toInt();
-    Serial.println("Set delay time: ");
-    Serial.println(tDuration);
+    Serial.print("Set delay time: ");
+    Serial.print(tDuration);
     Serial.println("ms");
     numberStr="1";
    }

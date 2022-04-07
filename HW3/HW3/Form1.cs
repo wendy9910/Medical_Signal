@@ -18,8 +18,8 @@ namespace HW3
         List<byte> raw;
         byte[] buf;
         StringBuilder sb;
+        bool stop = false;
                 
-
         public Form1()
         {
             //初始化
@@ -45,22 +45,18 @@ namespace HW3
 
         private void btnAssign_Click(object sender, EventArgs e)
         {
-            if (serialPort1.IsOpen == false) 
-            {
-                serialPort1.PortName = (string)cmbBxCOMPort.SelectedItem;
-            }
-            Size = new Size(800, 497);
+            serialPort1.PortName = (string)cmbBxCOMPort.SelectedItem;
+            Size = new Size(800, 427);
             iNow = 0;
             buf = new byte[serialPort1.ReadBufferSize];
-            if (serialPort1.IsOpen == false) serialPort1.Open();
+            serialPort1.Open();
             timer1.Start();
-            serialPort1.Write("0");
         }
 
         private void btnSetIntrval_Click(object sender, EventArgs e)
         {
-            
-            if (serialPort1.IsOpen)
+
+            if(serialPort1.IsOpen)
                 serialPort1.Write(interval.ToString());
             bLED = true;
             rdBtnOn.Checked = true;
@@ -103,6 +99,29 @@ namespace HW3
             lblInterval.Text = interval.ToString();
         }
 
+        private void rdBtnOn_Click(object sender, EventArgs e)
+        {
+            bLED = true;
+            if (serialPort1.IsOpen)
+                serialPort1.Write("1");
+            rdBtnOn.ForeColor = Color.Blue;
+            rdBtnOn.BackColor = Color.Yellow;
+            rdBtnOFF.ForeColor = Color.Black;
+            rdBtnOFF.BackColor = Color.White;
+
+        }
+
+        private void rdBtnOFF_Click(object sender, EventArgs e)
+        {
+            bLED = false;
+            if (serialPort1.IsOpen)
+                serialPort1.Write("0");
+            rdBtnOn.ForeColor = Color.Yellow;
+            rdBtnOn.BackColor = Color.Green;
+            rdBtnOFF.ForeColor = Color.Green;
+            rdBtnOFF.BackColor = Color.LightGray;
+        }
+
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
 
@@ -130,46 +149,7 @@ namespace HW3
             }
         }
 
-        private void rdBtnOn_CheckedChanged(object sender, EventArgs e)
-        {
-            if (bLED == false) 
-            {
-                bLED = true;
-                if (serialPort1.IsOpen == false)
-                {
-                    serialPort1.Open();
-                    serialPort1.Write(interval.ToString());
-                }
-                else 
-                {
-                    serialPort1.Write(interval.ToString());
-                }
-
-                rdBtnOn.ForeColor = Color.Blue;
-                rdBtnOn.BackColor = Color.Yellow;
-                rdBtnOFF.ForeColor = Color.Black;
-                rdBtnOFF.BackColor = Color.White;
-            }
-            
-
-        }
-        private void rdBtnOFF_CheckedChanged(object sender, EventArgs e)
-        {
-            if (bLED == true) 
-            {
-                bLED = false;
-                if (serialPort1.IsOpen)
-                {
-                    serialPort1.Write("0");
-                }
-
-                rdBtnOn.ForeColor = Color.Yellow;
-                rdBtnOn.BackColor = Color.Green;
-                rdBtnOFF.ForeColor = Color.Green;
-                rdBtnOFF.BackColor = Color.LightGray;
-            }
-                
-        }
+        
 
     }
 }
