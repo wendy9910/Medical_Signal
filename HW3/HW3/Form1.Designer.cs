@@ -36,6 +36,8 @@
             this.getPortsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdBtnOFF = new System.Windows.Forms.RadioButton();
+            this.rdBtnOn = new System.Windows.Forms.RadioButton();
             this.txtBxRxInfo = new System.Windows.Forms.TextBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.btnSetIntrval = new System.Windows.Forms.Button();
@@ -46,8 +48,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.rdBtnOn = new System.Windows.Forms.RadioButton();
-            this.rdBtnOFF = new System.Windows.Forms.RadioButton();
             this.contextMenuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
@@ -118,6 +118,32 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Set LED Status";
+            // 
+            // rdBtnOFF
+            // 
+            this.rdBtnOFF.AutoSize = true;
+            this.rdBtnOFF.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rdBtnOFF.Location = new System.Drawing.Point(150, 41);
+            this.rdBtnOFF.Name = "rdBtnOFF";
+            this.rdBtnOFF.Size = new System.Drawing.Size(97, 24);
+            this.rdBtnOFF.TabIndex = 1;
+            this.rdBtnOFF.TabStop = true;
+            this.rdBtnOFF.Text = "LED Off";
+            this.rdBtnOFF.UseVisualStyleBackColor = true;
+            this.rdBtnOFF.Click += new System.EventHandler(this.rdBtnOFF_Click);
+            // 
+            // rdBtnOn
+            // 
+            this.rdBtnOn.AutoSize = true;
+            this.rdBtnOn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rdBtnOn.Location = new System.Drawing.Point(6, 40);
+            this.rdBtnOn.Name = "rdBtnOn";
+            this.rdBtnOn.Size = new System.Drawing.Size(94, 24);
+            this.rdBtnOn.TabIndex = 0;
+            this.rdBtnOn.TabStop = true;
+            this.rdBtnOn.Text = "LED On";
+            this.rdBtnOn.UseVisualStyleBackColor = true;
+            this.rdBtnOn.Click += new System.EventHandler(this.rdBtnOn_Click);
             // 
             // txtBxRxInfo
             // 
@@ -205,32 +231,6 @@
             // serialPort1
             // 
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
-            // 
-            // rdBtnOn
-            // 
-            this.rdBtnOn.AutoSize = true;
-            this.rdBtnOn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.rdBtnOn.Location = new System.Drawing.Point(6, 40);
-            this.rdBtnOn.Name = "rdBtnOn";
-            this.rdBtnOn.Size = new System.Drawing.Size(94, 24);
-            this.rdBtnOn.TabIndex = 0;
-            this.rdBtnOn.TabStop = true;
-            this.rdBtnOn.Text = "LED On";
-            this.rdBtnOn.UseVisualStyleBackColor = true;
-            this.rdBtnOn.Click += new System.EventHandler(this.rdBtnOn_Click);
-            // 
-            // rdBtnOFF
-            // 
-            this.rdBtnOFF.AutoSize = true;
-            this.rdBtnOFF.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.rdBtnOFF.Location = new System.Drawing.Point(150, 41);
-            this.rdBtnOFF.Name = "rdBtnOFF";
-            this.rdBtnOFF.Size = new System.Drawing.Size(97, 24);
-            this.rdBtnOFF.TabIndex = 1;
-            this.rdBtnOFF.TabStop = true;
-            this.rdBtnOFF.Text = "LED Off";
-            this.rdBtnOFF.UseVisualStyleBackColor = true;
-            this.rdBtnOFF.Click += new System.EventHandler(this.rdBtnOFF_Click);
             // 
             // Form1
             // 

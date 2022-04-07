@@ -56,14 +56,6 @@ namespace HW3
         private void btnSetIntrval_Click(object sender, EventArgs e)
         {
 
-            if(serialPort1.IsOpen)
-                serialPort1.Write(interval.ToString());
-            bLED = true;
-            rdBtnOn.Checked = true;
-            rdBtnOn.ForeColor = Color.Blue;
-            rdBtnOn.BackColor = Color.Yellow;
-            rdBtnOFF.ForeColor = Color.Black;
-            rdBtnOFF.BackColor = Color.White;
         }
         private void getPortsToolStripMenuItem_Click(object sender, EventArgs e) //取得COM6
         {

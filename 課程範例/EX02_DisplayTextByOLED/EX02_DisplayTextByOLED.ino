@@ -20,7 +20,7 @@ void setup()
 void loop()
 { 
   u8g2.clearBuffer();
-  u8g2.setCursor(0, 15);
+  u8g2.setCursor(2, 15);
   u8g2.print("Hello World!!");
   u8g2.sendBuffer();
   delay(3000);
