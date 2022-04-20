@@ -1,0 +1,10 @@
+C:\Users\88691\Desktop\Medical_Signal\CH4\Rx_HeartRate_From\Rx_HeartRate_From\bin\Debug\Rx_HeartRate_From.exe.config
+C:\Users\88691\Desktop\Medical_Signal\CH4\Rx_HeartRate_From\Rx_HeartRate_From\bin\Debug\Rx_HeartRate_From.exe
+C:\Users\88691\Desktop\Medical_Signal\CH4\Rx_HeartRate_From\Rx_HeartRate_From\bin\Debug\Rx_HeartRate_From.pdb
+C:\Users\88691\Desktop\Medical_Signal\CH4\Rx_HeartRate_From\Rx_HeartRate_From\obj\Debug\Rx_HeartRate_From.csprojAssemblyReference.cache
+C:\Users\88691\Desktop\Medical_Signal\CH4\Rx_HeartRate_From\Rx_HeartRate_From\obj\Debug\Rx_HeartRate_From.Form1.resources
+C:\Users\88691\Desktop\Medical_Signal\CH4\Rx_HeartRate_From\Rx_HeartRate_From\obj\Debug\Rx_HeartRate_From.Properties.Resources.resources
+C:\Users\88691\Desktop\Medical_Signal\CH4\Rx_HeartRate_From\Rx_HeartRate_From\obj\Debug\Rx_HeartRate_From.csproj.GenerateResource.cache
+C:\Users\88691\Desktop\Medical_Signal\CH4\Rx_HeartRate_From\Rx_HeartRate_From\obj\Debug\Rx_HeartRate_From.csproj.CoreCompileInputs.cache
+C:\Users\88691\Desktop\Medical_Signal\CH4\Rx_HeartRate_From\Rx_HeartRate_From\obj\Debug\Rx_HeartRate_From.exe
+C:\Users\88691\Desktop\Medical_Signal\CH4\Rx_HeartRate_From\Rx_HeartRate_From\obj\Debug\Rx_HeartRate_From.pdb
