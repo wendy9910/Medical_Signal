@@ -30,16 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.GetPortbtn = new System.Windows.Forms.Button();
-            this.comboBox = new System.Windows.Forms.ComboBox();
-            this.StartRxbtn = new System.Windows.Forms.Button();
-            this.StopRxbtn = new System.Windows.Forms.Button();
-            this.Savebtn = new System.Windows.Forms.Button();
-            this.Clearbtn = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.Clearbtn = new System.Windows.Forms.Button();
+            this.Savebtn = new System.Windows.Forms.Button();
+            this.StopRxbtn = new System.Windows.Forms.Button();
+            this.StartRxbtn = new System.Windows.Forms.Button();
+            this.comboBox = new System.Windows.Forms.ComboBox();
+            this.GetPortbtn = new System.Windows.Forms.Button();
             this.ShowText1 = new System.Windows.Forms.TextBox();
             this.ShowText2 = new System.Windows.Forms.TextBox();
-            this.serialPort = new System.IO.Ports.SerialPort(this.components);
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -62,64 +62,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Receive";
             // 
-            // GetPortbtn
+            // button6
             // 
-            this.GetPortbtn.Font = new System.Drawing.Font("新細明體", 12F);
-            this.GetPortbtn.ForeColor = System.Drawing.Color.Green;
-            this.GetPortbtn.Location = new System.Drawing.Point(7, 33);
-            this.GetPortbtn.Name = "GetPortbtn";
-            this.GetPortbtn.Size = new System.Drawing.Size(130, 31);
-            this.GetPortbtn.TabIndex = 0;
-            this.GetPortbtn.Text = "Get Ports";
-            this.GetPortbtn.UseVisualStyleBackColor = true;
-            this.GetPortbtn.Click += new System.EventHandler(this.GetPortbtn_Click);
-            // 
-            // comboBox
-            // 
-            this.comboBox.FormattingEnabled = true;
-            this.comboBox.Location = new System.Drawing.Point(143, 33);
-            this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(121, 31);
-            this.comboBox.TabIndex = 1;
-            this.comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            // 
-            // StartRxbtn
-            // 
-            this.StartRxbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.StartRxbtn.Font = new System.Drawing.Font("新細明體", 12F);
-            this.StartRxbtn.Location = new System.Drawing.Point(270, 34);
-            this.StartRxbtn.Name = "StartRxbtn";
-            this.StartRxbtn.Size = new System.Drawing.Size(83, 30);
-            this.StartRxbtn.TabIndex = 2;
-            this.StartRxbtn.Text = "Start Rx";
-            this.StartRxbtn.UseVisualStyleBackColor = false;
-            this.StartRxbtn.Click += new System.EventHandler(this.StartRxbtn_Click);
-            // 
-            // StopRxbtn
-            // 
-            this.StopRxbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.StopRxbtn.Font = new System.Drawing.Font("新細明體", 12F);
-            this.StopRxbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.StopRxbtn.Location = new System.Drawing.Point(359, 33);
-            this.StopRxbtn.Name = "StopRxbtn";
-            this.StopRxbtn.Size = new System.Drawing.Size(79, 30);
-            this.StopRxbtn.TabIndex = 3;
-            this.StopRxbtn.Text = "Stop Rx";
-            this.StopRxbtn.UseVisualStyleBackColor = false;
-            this.StopRxbtn.Click += new System.EventHandler(this.StopRxbtn_Click);
-            // 
-            // Savebtn
-            // 
-            this.Savebtn.BackColor = System.Drawing.Color.Yellow;
-            this.Savebtn.Font = new System.Drawing.Font("新細明體", 12F);
-            this.Savebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.Savebtn.Location = new System.Drawing.Point(444, 34);
-            this.Savebtn.Name = "Savebtn";
-            this.Savebtn.Size = new System.Drawing.Size(59, 30);
-            this.Savebtn.TabIndex = 4;
-            this.Savebtn.Text = "Save";
-            this.Savebtn.UseVisualStyleBackColor = false;
-            this.Savebtn.Click += new System.EventHandler(this.Savebtn_Click);
+            this.button6.BackColor = System.Drawing.Color.Green;
+            this.button6.Font = new System.Drawing.Font("新細明體", 12F);
+            this.button6.ForeColor = System.Drawing.Color.Yellow;
+            this.button6.Location = new System.Drawing.Point(626, 33);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(150, 31);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Update Com Port";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Clearbtn
             // 
@@ -134,18 +88,64 @@
             this.Clearbtn.UseVisualStyleBackColor = false;
             this.Clearbtn.Click += new System.EventHandler(this.Clearbtn_Click);
             // 
-            // button6
+            // Savebtn
             // 
-            this.button6.BackColor = System.Drawing.Color.Green;
-            this.button6.Font = new System.Drawing.Font("新細明體", 12F);
-            this.button6.ForeColor = System.Drawing.Color.Yellow;
-            this.button6.Location = new System.Drawing.Point(626, 33);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(150, 31);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Update Com Port";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.Savebtn.BackColor = System.Drawing.Color.Yellow;
+            this.Savebtn.Font = new System.Drawing.Font("新細明體", 12F);
+            this.Savebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Savebtn.Location = new System.Drawing.Point(444, 34);
+            this.Savebtn.Name = "Savebtn";
+            this.Savebtn.Size = new System.Drawing.Size(63, 30);
+            this.Savebtn.TabIndex = 4;
+            this.Savebtn.Text = "Save";
+            this.Savebtn.UseVisualStyleBackColor = false;
+            this.Savebtn.Click += new System.EventHandler(this.Savebtn_Click);
+            // 
+            // StopRxbtn
+            // 
+            this.StopRxbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.StopRxbtn.Font = new System.Drawing.Font("新細明體", 12F);
+            this.StopRxbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.StopRxbtn.Location = new System.Drawing.Point(359, 33);
+            this.StopRxbtn.Name = "StopRxbtn";
+            this.StopRxbtn.Size = new System.Drawing.Size(79, 30);
+            this.StopRxbtn.TabIndex = 3;
+            this.StopRxbtn.Text = "Stop Rx";
+            this.StopRxbtn.UseVisualStyleBackColor = false;
+            this.StopRxbtn.Click += new System.EventHandler(this.StopRxbtn_Click);
+            // 
+            // StartRxbtn
+            // 
+            this.StartRxbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.StartRxbtn.Font = new System.Drawing.Font("新細明體", 12F);
+            this.StartRxbtn.Location = new System.Drawing.Point(270, 34);
+            this.StartRxbtn.Name = "StartRxbtn";
+            this.StartRxbtn.Size = new System.Drawing.Size(83, 30);
+            this.StartRxbtn.TabIndex = 2;
+            this.StartRxbtn.Text = "Start Rx";
+            this.StartRxbtn.UseVisualStyleBackColor = false;
+            this.StartRxbtn.Click += new System.EventHandler(this.StartRxbtn_Click);
+            // 
+            // comboBox
+            // 
+            this.comboBox.FormattingEnabled = true;
+            this.comboBox.Location = new System.Drawing.Point(143, 33);
+            this.comboBox.Name = "comboBox";
+            this.comboBox.Size = new System.Drawing.Size(121, 31);
+            this.comboBox.TabIndex = 1;
+            this.comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            // 
+            // GetPortbtn
+            // 
+            this.GetPortbtn.Font = new System.Drawing.Font("新細明體", 12F);
+            this.GetPortbtn.ForeColor = System.Drawing.Color.Green;
+            this.GetPortbtn.Location = new System.Drawing.Point(7, 33);
+            this.GetPortbtn.Name = "GetPortbtn";
+            this.GetPortbtn.Size = new System.Drawing.Size(130, 31);
+            this.GetPortbtn.TabIndex = 0;
+            this.GetPortbtn.Text = "Get Ports";
+            this.GetPortbtn.UseVisualStyleBackColor = true;
+            this.GetPortbtn.Click += new System.EventHandler(this.GetPortbtn_Click);
             // 
             // ShowText1
             // 
@@ -163,9 +163,9 @@
             this.ShowText2.Size = new System.Drawing.Size(150, 397);
             this.ShowText2.TabIndex = 2;
             // 
-            // serialPort
+            // serialPort1
             // 
-            this.serialPort.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
+            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
             // timer1
             // 
@@ -200,7 +200,7 @@
         private System.Windows.Forms.Button GetPortbtn;
         private System.Windows.Forms.TextBox ShowText1;
         private System.Windows.Forms.TextBox ShowText2;
-        private System.IO.Ports.SerialPort serialPort;
+        private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.Timer timer1;
     }
 }

@@ -20,10 +20,12 @@ namespace PC_RX
         List<byte> raw;
         byte val;
         string s0;
+        ///ComPortConfigForm setupComPort;
 
         public Form1()
         {
             InitializeComponent();
+            ///setupComPort = new ComPortConfigForm();
         }
         private void getAllPorts()
         {
@@ -33,6 +35,8 @@ namespace PC_RX
             foreach (string port in ports)
                 comboBox.Items.Add(port);
             comboBox.SelectedIndex = comboBox.Items.Count - 1;//找最後一個COM6
+            StartRxbtn.Enabled = true;
+            serialPort1.PortName = comboBox.SelectedItem.ToString();
         }
 
         private void displayRx() 
@@ -54,17 +58,23 @@ namespace PC_RX
             }
             ShowText1.Text = res.ToString();
             ShowText2.Text = resH.ToString();
+            Application.DoEvents();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            res = new StringBuilder();
+            resH = new StringBuilder();
+
             getAllPorts();
             Size = new Size(800, 500);
+            raw = new List<byte>();
+            
         }
 
         private void GetPortbtn_Click(object sender, EventArgs e)
         {
-
+            getAllPorts();
         }
 
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -74,18 +84,18 @@ namespace PC_RX
 
         private void StartRxbtn_Click(object sender, EventArgs e)
         {
+
             iStart = 0;
             iEnd = -1;
             ii = 0;
-            StopRxbtn.Enabled = true;
-            Savebtn.Enabled = false;
+           
             raw.Clear();
-            if (serialPort.IsOpen) 
+            if (serialPort1.IsOpen) 
             {
-                serialPort.Close();
+                serialPort1.Close();
             }              
-            serialPort.PortName = comboBox.SelectedItem.ToString();
-            serialPort.Open();
+            serialPort1.PortName = comboBox.SelectedItem.ToString();
+            serialPort1.Open();
             StartRxbtn.Enabled = false;
             timer1.Start();
 
@@ -121,6 +131,14 @@ namespace PC_RX
 
         private void serialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
         {
+            if (serialPort1.BytesToRead > 0) 
+            {
+                len = serialPort1.Read(buf, 0, buf.Length);
+                i = 0;
+                while (i < len)
+                    raw.Add(buf[i++]);
+            
+            }
 
         }
     }
