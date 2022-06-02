@@ -52,8 +52,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="COMPortForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COMPortForm.Designer.cs">
+      <DependentUpon>COMPortForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerialPortConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerialPortConfiguration.Designer.cs">
+      <DependentUpon>SerialPortConfiguration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="COMPortForm.resx">
+      <DependentUpon>COMPortForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

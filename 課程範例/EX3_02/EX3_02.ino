@@ -4,7 +4,7 @@ float dt;
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(9600);
+  Serial.begin(115200);
   i=-1;
   dt=1000.0/sampling;
 }

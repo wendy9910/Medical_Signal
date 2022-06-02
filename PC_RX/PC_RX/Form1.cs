@@ -20,6 +20,7 @@ namespace PC_RX
         List<byte> raw;
         byte val;
         string s0;
+        SaveFileDialog saveFileDialog1;
         ///ComPortConfigForm setupComPort;
 
         public Form1()
@@ -48,7 +49,7 @@ namespace PC_RX
             while(iStart <= iEnd) 
             {
                 val = raw[iStart++];
-                s0 = string.Format("{0:x2}", val);
+                s0 = string.Format("{0:X2}", val);
                 resH.Append(s0);
                 if(iStart % 20 == 0) 
                 {
@@ -56,8 +57,8 @@ namespace PC_RX
                 }
                 res.AppendFormat("{0}", (char)val);            
             }
-            ShowText1.Text = res.ToString();
-            ShowText2.Text = resH.ToString();
+            ShowText1.Text = resH.ToString();
+            ShowText2.Text = res.ToString();
             Application.DoEvents();
         }
 
@@ -69,6 +70,7 @@ namespace PC_RX
             getAllPorts();
             Size = new Size(800, 500);
             raw = new List<byte>();
+            buf = new byte[serialPort1.ReadBufferSize];
             
         }
 
@@ -88,7 +90,10 @@ namespace PC_RX
             iStart = 0;
             iEnd = -1;
             ii = 0;
-           
+
+            StartRxbtn.Enabled = true;
+            Savebtn.Enabled = false;
+            
             raw.Clear();
             if (serialPort1.IsOpen) 
             {
@@ -99,11 +104,12 @@ namespace PC_RX
             StartRxbtn.Enabled = false;
             timer1.Start();
 
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (StopRxbtn.Enabled) 
+            if (StopRxbtn.Enabled==false) 
             {
                 displayRx();
             }
@@ -111,17 +117,35 @@ namespace PC_RX
 
         private void StopRxbtn_Click(object sender, EventArgs e)
         {
+            StartRxbtn.Enabled = true;
+            StopRxbtn.Enabled = false;
+            if(raw.Count > 0)
+                Savebtn.Enabled = true;
+            serialPort1.Close();
+            timer1.Stop();
 
         }
 
         private void Savebtn_Click(object sender, EventArgs e)
         {
+            serialPort1.Close();
+            saveFileDialog1.FileName = string.Format("Ardunio_{0:D4}{1:D2}{2:D2}_{3:D2}{4:D2}{5:D2}.txt",
+                DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day,
+                DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
+            if (saveFileDialog1.ShowDialog() != System.Windows.Forms.DialogResult.OK)
+                return;
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < raw.Count; i++)
+                sb.Append((char)raw[i]);
+            File.AppendAllText(saveFileDialog1.FileName, sb.ToString());
 
         }
 
         private void Clearbtn_Click(object sender, EventArgs e)
         {
-
+            ShowText1.Text = "";
+            ShowText2.Text = "";
+            raw.Clear();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -131,13 +155,12 @@ namespace PC_RX
 
         private void serialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
         {
-            if (serialPort1.BytesToRead > 0) 
+            if (!StartRxbtn.Enabled && serialPort1.BytesToRead > 0) 
             {
                 len = serialPort1.Read(buf, 0, buf.Length);
                 i = 0;
                 while (i < len)
-                    raw.Add(buf[i++]);
-            
+                    raw.Add(buf[i++]);        
             }
 
         }

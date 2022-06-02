@@ -149,6 +149,7 @@
             // 
             // ShowText1
             // 
+            this.ShowText1.Font = new System.Drawing.Font("新細明體", 12F);
             this.ShowText1.Location = new System.Drawing.Point(13, 98);
             this.ShowText1.Multiline = true;
             this.ShowText1.Name = "ShowText1";
@@ -157,6 +158,7 @@
             // 
             // ShowText2
             // 
+            this.ShowText2.Font = new System.Drawing.Font("新細明體", 12F);
             this.ShowText2.Location = new System.Drawing.Point(638, 98);
             this.ShowText2.Multiline = true;
             this.ShowText2.Name = "ShowText2";
@@ -165,10 +167,12 @@
             // 
             // serialPort1
             // 
+            this.serialPort1.BaudRate = 115200;
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
             // timer1
             // 
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
