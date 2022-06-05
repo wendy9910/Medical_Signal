@@ -109,5 +109,10 @@ namespace mySerialPort
             serialPort1.RtsEnable = bool.Parse(rtsOn.Checked.ToString());
             Close();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

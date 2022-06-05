@@ -54,6 +54,7 @@
             this.OK.TabIndex = 1;
             this.OK.Text = "OK";
             this.OK.UseVisualStyleBackColor = false;
+            this.OK.Click += new System.EventHandler(this.OK_Click);
             // 
             // cmbBxCOMPort
             // 
@@ -63,7 +64,7 @@
             this.cmbBxCOMPort.Size = new System.Drawing.Size(166, 23);
             this.cmbBxCOMPort.TabIndex = 2;
             // 
-            // Form1
+            // GetComPort
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -71,7 +72,7 @@
             this.Controls.Add(this.cmbBxCOMPort);
             this.Controls.Add(this.OK);
             this.Controls.Add(this.GetPort);
-            this.Name = "Form1";
+            this.Name = "GetComPort";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

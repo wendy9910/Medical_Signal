@@ -86,9 +86,9 @@
             this.HRvalue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.HRvalue.Location = new System.Drawing.Point(135, 97);
             this.HRvalue.Name = "HRvalue";
-            this.HRvalue.Size = new System.Drawing.Size(64, 34);
+            this.HRvalue.Size = new System.Drawing.Size(31, 34);
             this.HRvalue.TabIndex = 3;
-            this.HRvalue.Text = "000";
+            this.HRvalue.Text = "0";
             this.HRvalue.Click += new System.EventHandler(this.HRvalue_Click);
             // 
             // label4

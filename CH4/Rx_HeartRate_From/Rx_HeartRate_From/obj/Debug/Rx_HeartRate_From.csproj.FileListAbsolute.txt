@@ -9,4 +9,4 @@ C:\Users\88691\Desktop\Medical_Signal\CH4\Rx_HeartRate_From\Rx_HeartRate_From\ob
 C:\Users\88691\Desktop\Medical_Signal\CH4\Rx_HeartRate_From\Rx_HeartRate_From\obj\Debug\Rx_HeartRate_From.exe
 C:\Users\88691\Desktop\Medical_Signal\CH4\Rx_HeartRate_From\Rx_HeartRate_From\obj\Debug\Rx_HeartRate_From.pdb
 C:\Users\88691\Desktop\Medical_Signal\CH4\Rx_HeartRate_From\Rx_HeartRate_From\obj\Debug\mySerialPort.ComPortConfigForm.resources
-C:\Users\88691\Desktop\Medical_Signal\CH4\Rx_HeartRate_From\Rx_HeartRate_From\obj\Debug\mySerialPort.FormShow.resources
+C:\Users\88691\Desktop\Medical_Signal\CH4\Rx_HeartRate_From\Rx_HeartRate_From\obj\Debug\COMPortForm.GetComPort.resources

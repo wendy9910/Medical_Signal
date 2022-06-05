@@ -33,8 +33,6 @@ namespace Rx_HeartRate_From
             setupComPort = new ComPortConfigForm();
         }
 
-     
-
         private void date_Click(object sender, EventArgs e)
         {
 
@@ -88,6 +86,7 @@ namespace Rx_HeartRate_From
             setupComPort.ShowDialog();
             buf = null;
             buf = new Byte[serialPort1.ReadBufferSize];
+            serialPort1.Open();
         }
 
         private void configureCOMPortToolStripMenuItem_Click(object sender, EventArgs e)
@@ -97,22 +96,26 @@ namespace Rx_HeartRate_From
 
         private void startRxToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            timer1.Start();
+            serialPort1.Open();
         }
 
         private void stopRxToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (serialPort1.IsOpen)
+                serialPort1.Close();
+            raw.Clear();
+            timer1.Stop();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
-
+            
         }
 
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)

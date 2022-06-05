@@ -200,10 +200,11 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(231, 351);
+            this.textBox1.Location = new System.Drawing.Point(221, 356);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(98, 25);
+            this.textBox1.Size = new System.Drawing.Size(97, 25);
             this.textBox1.TabIndex = 7;
+            this.textBox1.Text = "20";
             // 
             // button1
             // 
@@ -220,7 +221,17 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.AutoCompleteCustomSource.AddRange(new string[] {
+            "5",
+            "6",
+            "7",
+            "8"});
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "5",
+            "6",
+            "7",
+            "8"});
             this.comboBox2.Location = new System.Drawing.Point(157, 74);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(172, 23);
@@ -228,7 +239,19 @@
             // 
             // comboBox3
             // 
+            this.comboBox3.AutoCompleteCustomSource.AddRange(new string[] {
+            "None",
+            "Odd",
+            "Even",
+            "Mark",
+            "Space"});
             this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "None",
+            "Odd",
+            "Even",
+            "Mark",
+            "Space"});
             this.comboBox3.Location = new System.Drawing.Point(157, 120);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(172, 23);
@@ -236,7 +259,17 @@
             // 
             // comboBox4
             // 
+            this.comboBox4.AutoCompleteCustomSource.AddRange(new string[] {
+            "None",
+            "One",
+            "Two",
+            "OnePointFive"});
             this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "None",
+            "One",
+            "Two",
+            "OnePointFive"});
             this.comboBox4.Location = new System.Drawing.Point(157, 168);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(172, 23);
@@ -244,17 +277,52 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            "300",
+            "600",
+            "1200",
+            "1800",
+            "2400",
+            "3600",
+            "4800",
+            "7200",
+            "9600",
+            "14400",
+            "19200",
+            "28800",
+            "38400",
+            "57600",
+            "115200",
+            "230400"});
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "300",
+            "600",
+            "1200",
+            "1800",
+            "2400",
+            "3600",
+            "4800",
+            "7200",
+            "9600",
+            "14400",
+            "19200",
+            "28800",
+            "38400",
+            "57600",
+            "115200",
+            "230400"});
             this.comboBox1.Location = new System.Drawing.Point(157, 23);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(172, 23);
             this.comboBox1.TabIndex = 13;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // ComPortConfigForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 450);
+            this.ClientSize = new System.Drawing.Size(338, 459);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
