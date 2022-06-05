@@ -1,0 +1,10 @@
+C:\Users\88691\Desktop\Medical_Signal\CH4\mySerialPort\mySerialPort\bin\Debug\mySerialPort.exe.config
+C:\Users\88691\Desktop\Medical_Signal\CH4\mySerialPort\mySerialPort\bin\Debug\mySerialPort.exe
+C:\Users\88691\Desktop\Medical_Signal\CH4\mySerialPort\mySerialPort\bin\Debug\mySerialPort.pdb
+C:\Users\88691\Desktop\Medical_Signal\CH4\mySerialPort\mySerialPort\obj\Debug\mySerialPort.csprojAssemblyReference.cache
+C:\Users\88691\Desktop\Medical_Signal\CH4\mySerialPort\mySerialPort\obj\Debug\mySerialPort.ComPortConfigForm.resources
+C:\Users\88691\Desktop\Medical_Signal\CH4\mySerialPort\mySerialPort\obj\Debug\mySerialPort.Properties.Resources.resources
+C:\Users\88691\Desktop\Medical_Signal\CH4\mySerialPort\mySerialPort\obj\Debug\mySerialPort.csproj.GenerateResource.cache
+C:\Users\88691\Desktop\Medical_Signal\CH4\mySerialPort\mySerialPort\obj\Debug\mySerialPort.csproj.CoreCompileInputs.cache
+C:\Users\88691\Desktop\Medical_Signal\CH4\mySerialPort\mySerialPort\obj\Debug\mySerialPort.exe
+C:\Users\88691\Desktop\Medical_Signal\CH4\mySerialPort\mySerialPort\obj\Debug\mySerialPort.pdb

@@ -9,33 +9,42 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
 
-
-namespace Rx_HeartRate_From
+namespace COMPortForm
 {
-    public partial class COMPortForm : Form
+    public partial class GetComPort : Form
     {
-        public COMPortForm()
+
+        SerialPort serialPort1;
+        public GetComPort()
         {
             InitializeComponent();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        public GetComPort(ref SerialPort sp)
+        {
+            InitializeComponent();
+
+            getAllPorts(ref sp);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void COMPortForm_Load(object sender, EventArgs e)
+        public string getAllPorts(ref SerialPort sp)
         {
-
-        }
-        private void getAllPorts()
-        {
+            serialPort1 = sp;
             cmbBxCOMPort.Items.Clear();
             string[] ports = SerialPort.GetPortNames(); //get serialport的名字 COM3、COM4、COM6
             Array.Sort(ports);
             foreach (string port in ports)
                 cmbBxCOMPort.Items.Add(port);
             cmbBxCOMPort.SelectedIndex = cmbBxCOMPort.Items.Count - 1;//找最後一個COM6
+            string name = (string)cmbBxCOMPort.SelectedItem;
+
+            return name;
         }
+
     }
 }

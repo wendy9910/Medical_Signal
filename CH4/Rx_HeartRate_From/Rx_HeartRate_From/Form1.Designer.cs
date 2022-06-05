@@ -36,6 +36,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.assignCOMPortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configureCOMPortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.startRxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stopRxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -45,7 +52,7 @@
             this.label1.Location = new System.Drawing.Point(14, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 22);
+            this.label1.Size = new System.Drawing.Size(68, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Now:";
             // 
@@ -55,7 +62,7 @@
             this.dateLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dateLabel.Location = new System.Drawing.Point(135, 27);
             this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(60, 22);
+            this.dateLabel.Size = new System.Drawing.Size(74, 27);
             this.dateLabel.TabIndex = 1;
             this.dateLabel.Text = "label2";
             this.dateLabel.TextChanged += new System.EventHandler(this.timer1_Tick);
@@ -68,7 +75,7 @@
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label2.Location = new System.Drawing.Point(12, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 22);
+            this.label2.Size = new System.Drawing.Size(127, 27);
             this.label2.TabIndex = 2;
             this.label2.Text = "Heart Rate:";
             // 
@@ -77,11 +84,11 @@
             this.HRvalue.AutoSize = true;
             this.HRvalue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.HRvalue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.HRvalue.Location = new System.Drawing.Point(124, 97);
+            this.HRvalue.Location = new System.Drawing.Point(135, 97);
             this.HRvalue.Name = "HRvalue";
-            this.HRvalue.Size = new System.Drawing.Size(60, 22);
+            this.HRvalue.Size = new System.Drawing.Size(64, 34);
             this.HRvalue.TabIndex = 3;
-            this.HRvalue.Text = "label3";
+            this.HRvalue.Text = "000";
             this.HRvalue.Click += new System.EventHandler(this.HRvalue_Click);
             // 
             // label4
@@ -91,7 +98,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(296, 97);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 22);
+            this.label4.Size = new System.Drawing.Size(111, 27);
             this.label4.TabIndex = 4;
             this.label4.Text = "beats/min";
             // 
@@ -101,14 +108,64 @@
             // 
             // timer1
             // 
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.assignCOMPortToolStripMenuItem,
+            this.configureCOMPortToolStripMenuItem,
+            this.startRxToolStripMenuItem,
+            this.stopRxToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(222, 124);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            // 
+            // assignCOMPortToolStripMenuItem
+            // 
+            this.assignCOMPortToolStripMenuItem.Name = "assignCOMPortToolStripMenuItem";
+            this.assignCOMPortToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
+            this.assignCOMPortToolStripMenuItem.Text = "Assign COM Port";
+            this.assignCOMPortToolStripMenuItem.Click += new System.EventHandler(this.assignCOMPortToolStripMenuItem_Click);
+            // 
+            // configureCOMPortToolStripMenuItem
+            // 
+            this.configureCOMPortToolStripMenuItem.Name = "configureCOMPortToolStripMenuItem";
+            this.configureCOMPortToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
+            this.configureCOMPortToolStripMenuItem.Text = "Configure COM Port";
+            this.configureCOMPortToolStripMenuItem.Click += new System.EventHandler(this.configureCOMPortToolStripMenuItem_Click);
+            // 
+            // startRxToolStripMenuItem
+            // 
+            this.startRxToolStripMenuItem.Name = "startRxToolStripMenuItem";
+            this.startRxToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
+            this.startRxToolStripMenuItem.Text = "Start Rx";
+            this.startRxToolStripMenuItem.Click += new System.EventHandler(this.startRxToolStripMenuItem_Click);
+            // 
+            // stopRxToolStripMenuItem
+            // 
+            this.stopRxToolStripMenuItem.Name = "stopRxToolStripMenuItem";
+            this.stopRxToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
+            this.stopRxToolStripMenuItem.Text = "StopRx";
+            this.stopRxToolStripMenuItem.Click += new System.EventHandler(this.stopRxToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(419, 153);
+            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.label4);
             this.Controls.Add(this.HRvalue);
             this.Controls.Add(this.label2);
@@ -120,6 +177,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,6 +192,12 @@
         private System.Windows.Forms.Label label4;
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem assignCOMPortToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configureCOMPortToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem startRxToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stopRxToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 
