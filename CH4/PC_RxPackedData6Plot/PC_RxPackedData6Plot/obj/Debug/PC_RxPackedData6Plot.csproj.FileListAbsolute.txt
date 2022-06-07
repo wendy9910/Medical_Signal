@@ -1,0 +1,13 @@
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6Plot\PC_RxPackedData6Plot\bin\Debug\PC_RxPackedData6Plot.exe.config
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6Plot\PC_RxPackedData6Plot\bin\Debug\PC_RxPackedData6Plot.exe
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6Plot\PC_RxPackedData6Plot\bin\Debug\PC_RxPackedData6Plot.pdb
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6Plot\PC_RxPackedData6Plot\bin\Debug\myTools.dll
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6Plot\PC_RxPackedData6Plot\obj\Debug\PC_RxPackedData6Plot.csprojAssemblyReference.cache
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6Plot\PC_RxPackedData6Plot\obj\Debug\mySerialPort.ComPortConfigForm.resources
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6Plot\PC_RxPackedData6Plot\obj\Debug\PC_RxPackedData6Plot.Form1.resources
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6Plot\PC_RxPackedData6Plot\obj\Debug\PC_RxPackedData6Plot.Properties.Resources.resources
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6Plot\PC_RxPackedData6Plot\obj\Debug\PC_RxPackedData6Plot.csproj.GenerateResource.cache
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6Plot\PC_RxPackedData6Plot\obj\Debug\PC_RxPackedData6Plot.csproj.CoreCompileInputs.cache
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6Plot\PC_RxPackedData6Plot\obj\Debug\PC_RxPackedData6Plot.csproj.CopyComplete
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6Plot\PC_RxPackedData6Plot\obj\Debug\PC_RxPackedData6Plot.exe
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6Plot\PC_RxPackedData6Plot\obj\Debug\PC_RxPackedData6Plot.pdb

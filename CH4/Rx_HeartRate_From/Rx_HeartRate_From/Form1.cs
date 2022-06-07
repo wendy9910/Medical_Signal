@@ -86,7 +86,7 @@ namespace Rx_HeartRate_From
             setupComPort.ShowDialog();
             buf = null;
             buf = new Byte[serialPort1.ReadBufferSize];
-            serialPort1.Open();
+            
         }
 
         private void configureCOMPortToolStripMenuItem_Click(object sender, EventArgs e)
