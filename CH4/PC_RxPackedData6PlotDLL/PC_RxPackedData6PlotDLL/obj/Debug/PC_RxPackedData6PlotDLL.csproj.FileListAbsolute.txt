@@ -1,0 +1,12 @@
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6PlotDLL\PC_RxPackedData6PlotDLL\obj\Debug\PC_RxPackedData6PlotDLL.csprojAssemblyReference.cache
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6PlotDLL\PC_RxPackedData6PlotDLL\obj\Debug\PC_RxPackedData6PlotDLL.Properties.Resources.resources
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6PlotDLL\PC_RxPackedData6PlotDLL\obj\Debug\PC_RxPackedData6PlotDLL.csproj.GenerateResource.cache
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6PlotDLL\PC_RxPackedData6PlotDLL\obj\Debug\PC_RxPackedData6PlotDLL.csproj.CoreCompileInputs.cache
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6PlotDLL\PC_RxPackedData6PlotDLL\obj\Debug\PC_RxPackedData6PlotDLL.Form1.resources
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6PlotDLL\PC_RxPackedData6PlotDLL\bin\Debug\PC_RxPackedData6PlotDLL.exe.config
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6PlotDLL\PC_RxPackedData6PlotDLL\bin\Debug\PC_RxPackedData6PlotDLL.exe
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6PlotDLL\PC_RxPackedData6PlotDLL\bin\Debug\PC_RxPackedData6PlotDLL.pdb
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6PlotDLL\PC_RxPackedData6PlotDLL\bin\Debug\myTools.dll
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6PlotDLL\PC_RxPackedData6PlotDLL\obj\Debug\PC_RxPackedData6PlotDLL.csproj.CopyComplete
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6PlotDLL\PC_RxPackedData6PlotDLL\obj\Debug\PC_RxPackedData6PlotDLL.exe
+C:\Users\88691\Desktop\Medical_Signal\CH4\PC_RxPackedData6PlotDLL\PC_RxPackedData6PlotDLL\obj\Debug\PC_RxPackedData6PlotDLL.pdb

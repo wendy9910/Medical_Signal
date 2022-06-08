@@ -3,7 +3,7 @@
 /* MAX30100_PulseOximeter.h"找到多個程式庫
 已使用: F:\MCU_Demos\MCU_HealthSignal\111\libraries\MAX30100_milan
 未使用: F:\MCU_Demos\MCU_HealthSignal\111\libraries\Arduino‐MAX30100*/
-#define REPORTING_PERIOD_MS     1000
+#define REPORTING_PERIOD_MS 1000
   
 PulseOximeter pox;
 uint32_t tsLastReport = 0;
