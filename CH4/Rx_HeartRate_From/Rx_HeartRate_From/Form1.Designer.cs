@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dateLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.HRvalue = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -42,6 +41,7 @@
             this.startRxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stopRxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label3 = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,18 +78,6 @@
             this.label2.Size = new System.Drawing.Size(127, 27);
             this.label2.TabIndex = 2;
             this.label2.Text = "Heart Rate:";
-            // 
-            // HRvalue
-            // 
-            this.HRvalue.AutoSize = true;
-            this.HRvalue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.HRvalue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.HRvalue.Location = new System.Drawing.Point(135, 97);
-            this.HRvalue.Name = "HRvalue";
-            this.HRvalue.Size = new System.Drawing.Size(31, 34);
-            this.HRvalue.TabIndex = 3;
-            this.HRvalue.Text = "0";
-            this.HRvalue.Click += new System.EventHandler(this.HRvalue_Click);
             // 
             // label4
             // 
@@ -159,6 +147,15 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(163, 97);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 27);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "label3";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
@@ -166,8 +163,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(419, 153);
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.HRvalue);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.label1);
@@ -188,7 +185,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label HRvalue;
         private System.Windows.Forms.Label label4;
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.Timer timer1;
@@ -198,6 +194,7 @@
         private System.Windows.Forms.ToolStripMenuItem startRxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stopRxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.Label label3;
     }
 }
 

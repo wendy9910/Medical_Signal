@@ -16,7 +16,7 @@ namespace Rx_HeartRate_From
 {
     public partial class Form1 : System.Windows.Forms.Form
     {
-        StringBuilder res;
+        StringBuilder res,res2;
         List<byte> raw;
         byte[] buf;
         int len,i;
@@ -56,8 +56,7 @@ namespace Rx_HeartRate_From
             {
                 display();
             }
-            
-            
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -70,6 +69,7 @@ namespace Rx_HeartRate_From
             Debug.Print(serialPort1.PortName);
             raw = new List<byte>();
             res = new StringBuilder();
+            res2 = new StringBuilder();
             buf = new Byte[serialPort1.ReadBufferSize];
             serialPort1.Open();
             if (serialPort1.IsOpen) 
@@ -120,29 +120,37 @@ namespace Rx_HeartRate_From
 
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            raw.Clear();
+
             if (serialPort1.BytesToRead > 0)
             {
+                raw.Clear();
                 len = serialPort1.Read(buf, 0, buf.Length);
                 i = 0;
                 while (i < len)
                     raw.Add(buf[i++]);
             }
-           
+
         }
 
      
 
         private void display()
         {
-            res.Clear();
-            for (int k = 0; k < raw.Count; k++) 
+            //res.Clear();
+            res2.Clear();
+            for (int k = 0; k < raw.Count; k++)
             {
                 val = buf[k];
-                s0 = string.Format("{0:X2}", val);
+
+                //s0 = string.Format("{0:X2}", val);
+
                 res.AppendFormat("{0}", (char)val);
-            }           
-            HRvalue.Text = res.ToString();
+                res2.AppendFormat("{0}", (char)val);
+                //res.Append(s0);
+            }
+            //HRvalue.Text = res.ToString();
+            label3.Text = res2.ToString();
+            //HRvalue.Text = serialPort1.ReadLine();
             Application.DoEvents();
         }
     }
